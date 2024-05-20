@@ -76,44 +76,71 @@
         </a>
         <div class="modal">
             <div class="modal__half modal__about">
-                <h3 class="modal__title modal__title--about">About</h3>
+                <h3 class="modal__title modal__title--about"> A bit more about me</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer</h4>
                 <p class="modal__para">
-                    I am a frontend software engineer with a strong passion for building
-                    responsive web applications with great user experiences.
+                    I am a <b class="color__change">frontend software engineer</b> with a strong passion for building
+                    <b class="color__change">responsive</b> web applications with great <b class="color__change">user experiences</b>.
                     <br>
                     <br>
                     I am currently working on extremely difficult engineering problems and continuously
-                    learning to master new technologies.
+                    learning to <b class="color__change">master new technologies.</b>
                 </p>
                 <div class="modal__languages">
-                  <figure>
-                    <img src="./assets/html5-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/html5-logo.svg" alt="">
+                    <span class="language__name">HTML</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/css-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/css-logo.svg" alt="">
+                    <span class="language__name">CSS</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/Js-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/js-logo.svg" alt="">
+                    <span class="language__name">JavaScript</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/react-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/react-logo.svg" alt="">
+                    <span class="language__name">React</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/node-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/node-logo.svg" alt="">
+                    <span class="language__name">Node</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/nextjs-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/nextjs-logo.svg" alt="">
+                    <span class="language__name">NextJs</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/firebase-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/firebase-logo.svg" alt="">
+                    <span class="language__name">Firebase</span>
                   </figure>
-                  <figure>
-                    <img src="./assets/ts-logo.png" alt="">
+                  <figure class="modal__language">
+                    <img class="modal__language--img" src="./assets/ts-logo.svg" alt="">
+                    <span class="language__name">TypeScript</span>
                   </figure>
                 </div>
             </div>
-            <div class="modal__half modal__contact"></div>
+            <div class="modal__half modal__contact">
+                <i class="fas fa-times modal__exit click"></i>
+                <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
+                <form id="contact__form">
+                    <div class="form__item">
+                        <label class="form__item--label">Name</label>
+                        <input class="input" type="text" name="user_name">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Email</label>
+                        <input class="input" type="email" name="user_email">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label">Message</label>
+                        <textarea class="input" name="message"></textarea>
+                    </div>
+                    <input type="submit" value="Send it my way" class="form__submit">
+                </form>
+            </div>
         </div>
     </section>
     <section id="projects">

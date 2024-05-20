@@ -252,11 +252,69 @@ nav {
 
 .modal__about {
     background-color: rgb(245, 245, 245);
+    padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal__languages {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.modal__language {
+    width: 25%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 450ms ease;
+}
+
+.modal__language:hover .language__name {
+    transform: scale(1);
+}
+
+.modal__language:hover {
+    filter: brightness(80%);
+    transform: scale(0.9);
+}
+
+.language__name {
+    position: absolute;
+    bottom: -10px;
+    transform: scale(0);
+    transition: all 450ms ease;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.modal__language--img {
+    width: 100%;
+    scale: 1.5;
 }
 
 .modal__contact {
     background-color: #242424;
 }
+
+.modal__title {
+    font-size: 26px;
+}
+
+.modal__sub-title {
+    margin: 12px 0 24px 0;
+}
+
+.modal__para {
+    margin-bottom: 12px;
+    line-height: 1.75;
+    font-weight: 400;
+}
+
 
 /* Projects */
 
