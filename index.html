@@ -2,21 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lucian Bellevue</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="./index.js" defer></script>
+    <script src="./index.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "4rt7A5ouvI3gzFHLM",
+            });
+        })();
+    </script>
 </head>
 <body>
-    <section id="landing">
+    <section id="landing" onmousemove="moveBackground(event)">
         <nav>
             <figure>
                 <img id="my-logo" src="./assets/logo.svg" alt="logo">
             </figure>
             <ul class="nav__links--list">
-                <li class="nav__link">
+                <li class="nav__link" onclick="toggleModal()">
                     <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
@@ -30,15 +40,15 @@
                     link__hover-effect--black
                     ">Projects</a>
                 </li>
-                <li class="nav__link">
-                    <a href="" class="
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
                     ">Contact</a>
                 </li>
-                <li class="nav__link click">
-                    <a href="" class="
+                <li class="nav__link click" onclick="toggleContrast()">
+                    <a href="#" class="
                     nav__link--anchor
                     link__hover-effect
                     link__hover-effect--black
@@ -53,7 +63,7 @@
                 <p class="header__para">I am a <b class="color__change">Frontend Software Engineer</b> with a strong passion for building
                     responsive web applications with great user experiences.
                     <br>
-                    Here's a bit more <a href="#"><b class="color__change">about me.</b></a>
+                    Here's a bit more <b class="color__change click" onclick="toggleModal()">about me.</b>
                 </p>
                 <div class="social__list">
                     <a href="https://www.linkedin.com/in/lucianbellevue/" target="_blank" class="social__link click">
@@ -68,7 +78,7 @@
                 </div>
             </div>
         </header>
-        <button class="mail__btn click">
+        <button class="mail__btn click" onclick="toggleModal()">
             <i class="fas fa-envelope"></i>
         </button>
         <a href="#projects" class="scroll">
@@ -122,26 +132,41 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <i class="fas fa-times modal__exit click"></i>
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
                 <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
-                <h4 class="modal__sub-title modal__sub-title--contact">I'm currently open to new opportunities</h4>
-                <form id="contact__form">
+                <h4 class="modal__sub-title modal__sub-title--contact">I'm open to new opportunities</h4>
+                <form id="contact__form" onsubmit="contact(event)">
                     <div class="form__item">
                         <label class="form__item--label">Name</label>
-                        <input class="input" type="text" name="user_name">
+                        <input class="input" type="text" name="user_name" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Email</label>
-                        <input class="input" type="email" name="user_email">
+                        <input class="input" type="email" name="user_email" required></input>
                     </div>
                     <div class="form__item">
                         <label class="form__item--label">Message</label>
-                        <textarea class="input" name="message"></textarea>
+                        <textarea class="input" type="text" name="message" required></textarea>
                     </div>
-                    <input type="submit" value="Send it my way" class="form__submit">
+                    <button id="contact__submit" type="submit" class="form__submit">Send it my way</button>
                 </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message, I'll get back to you as soon as possible!
+                </div>
             </div>
         </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/squiggly.svg" class="shape shape--2">
+        <img src="./assets/circle.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/circle.svg" class="shape shape--5">
+        <img src="./assets/squiggly.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/semi circle.svg" class="shape shape--8">
     </section>
     <section id="projects">
         <div class="container">
@@ -220,9 +245,15 @@
     <footer>
         <div class="container">
             <div class="row footer__row">
-                <figure>
-                    <img class="footer__logo" src="./assets/logo.svg" alt="logo">
-                </figure>
+                <a href="#" class="footer__anchor">
+                    <figure>
+                        <img class="footer__logo" src="./assets/logo.svg" alt="logo">
+                    </figure>
+                    <span class="footer__logo--popper">
+                        Top
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
                 <div class="footer__social--list">
                     <a href="https://github.com/LucianBellevue" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
                          GitHub
@@ -230,7 +261,7 @@
                     <a href="https://www.linkedin.com/in/lucianbellevue/" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
                         LinkedIn
                     </a>
-                    <a href="#" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
+                    <a href="#" class="footer__social--link link__hover-effect link__hover-effect--white" onclick="toggleModal()">
                         Contact
                     </a>
                     <a href="" target="_blank" class="footer__social--link link__hover-effect link__hover-effect--white">
