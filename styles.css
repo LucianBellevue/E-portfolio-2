@@ -305,7 +305,7 @@ nav, .scroll, .header {
     display: inline-block;
     font-weight:900;
     animation: bounce 2s infinite, shine 2s infinite;
-    transition: all 300ms ease;
+    transition: all 450ms ease;
 }
 
 @keyframes bounce {
@@ -322,19 +322,19 @@ nav, .scroll, .header {
 
   @keyframes shine {
     0% {
-      color: red;
+      color: rgb(201, 2, 2);
     }
     25% {
-      color: orange;
+      color: rgb(179, 1, 1);
     }
     50% {
-      color: rgb(0, 255, 187);
+      color: rgb(151, 59, 59);
     }
     75% {
-      color: rgb(10, 198, 0);
+      color: rgb(165, 0, 0);
     }
     100% {
-      color: rgb(204, 0, 255);
+      color: rgb(100, 57, 57);
     }
   }
 
