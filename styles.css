@@ -194,6 +194,10 @@ nav, .scroll, .header {
     padding: 0 30px;
 }
 
+.header_content {
+    z-index: 2;
+}
+
 .header__para {
     font-size: 24px;
     line-height: 2;
@@ -342,6 +346,7 @@ nav, .scroll, .header {
 /* shapes */
 .shape {
     position: fixed;
+    z-index: 0;
   }
   .shape--0 {
     top: 15vh;
